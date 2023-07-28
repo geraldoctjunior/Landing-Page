@@ -1,0 +1,385 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'roboto', sans-serif;
+    font-weight: 300;
+    
+}
+
+body h4{
+    padding-bottom: 20px;
+    color: #089DDD;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+/*HEADER*/
+
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url(../images/imagem-painel-1920x1280.jpg) center center no-repeat;
+}
+
+.header .header-container {
+    display: flex;
+    padding: 20px 60px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+    margin-top: 0;
+}
+
+.header .header-container img {
+    width: 50px;
+}
+
+.header nav ul {
+    display: flex;
+}
+
+.header nav ul li {
+    transform: 0.3s;
+}
+
+.header nav ul li a {
+    margin: 10px 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #089DDD;
+    transition: 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #A6A6A6;
+}
+
+.header .painel {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .painel h2 {
+    font-weight: 900;
+    color: #089DDD;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header .painel h3 {
+    font-family: 'Roboto Mono', monospace;
+    color: #A6A6A6;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .2rem;
+}
+
+.header .painel img {
+    width: 130px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 550px) {
+    .header .header-container {
+        justify-content: center;
+    }
+
+    .header .header-container img {
+        display: none;
+    }
+
+    @media(max-width: 425px) {
+        .header nav ul li a {
+            font-size: 1.6rem;
+            margin: 10px;
+        }
+
+        .header .painel h2 {
+            font-size: 3rem;
+        }
+
+        .header .painel h3 {
+            font-size: 1.2rem;
+            letter-spacing: 0px;
+        }
+    }
+
+}
+
+/*ABOUT*/
+
+.about {
+    background-color: #1f1f1f;
+    display: grid;
+    grid: 
+    "picture tittle"
+    "picture text"        ;
+    padding: 30px 40px 50px 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.about h4{
+    grid-area: tittle;
+    padding: 0;
+}
+
+.about picture{
+    grid-area: picture;
+    width: 250px;
+}
+
+.about p{
+    padding: 30px;
+    background-color: #3d3d3d;
+    grid-area: text;
+    color: #ffffff;
+    max-width: 450px;
+}
+
+@media(max-width: 780px){
+    .about{
+        padding: 20px;
+    }
+}
+
+@media(max-width: 739px){
+    .about{
+        grid: "tittle" "picture" "text";
+    }
+    .about p{
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .about picture{
+        width: 100%;
+    }
+
+}
+
+/*PROJECTS*/
+
+.projects {
+    background-color: #1f1f1f;
+    padding: 30px 40px 50px 40px;
+}
+
+.projects .container-projects{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .container-projects .project{
+    background-color: #3d3d3d;
+    min-height: 250px;
+    display: flex;
+}
+
+.projects .container-projects .project p{
+    color: #089DDD;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: auto;
+}
+
+.projects .container-projects .project:hover{
+    opacity: 50%;
+}
+
+@media(max-width: 1024px) {
+    .projects {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 875px){
+    .projects .container-projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px){
+    .projects .container-projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*sKILLS*/
+
+.skills {
+    background-color: #1F1F1F;
+    padding: 30px 40px 50px 40px;
+}
+
+.skills .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills .container .description {
+    background-color: #3d3d3d;
+    min-height: 230px;
+    color: #089DDD;
+    padding: 20px;
+}
+
+.skills .container .description i {
+    font-size: 5rem;
+    padding-bottom: 15px;
+}
+
+.skills .container .description h5 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.skills .container .description p {
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+@media(max-width: 1024px) {
+    .skills {
+        padding: 20px;
+    }
+
+    .skills .container {
+        gap: 20px;
+    }
+
+    .skills .container .description {
+        min-height: 200px;
+    }
+
+    .skills .container .description i {
+        font-size: 4rem;
+        padding-bottom: 10px;
+    }
+
+    .skills .container .description h5 {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media(max-width: 942px) {
+    .skills .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media(max-width:642px) {
+    .skills .container .description p {
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width: 425px) {
+    .skills {
+        padding-top: 20px;
+    }
+
+    .skills .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
+
+/*FOOTER*/
+
+.footer {
+    background-color: #000000;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.footer .logo-rodape {
+    margin: 30px;
+}
+
+.footer img {
+    width: 50px;
+}
+
+.footer nav {
+    margin: 30px;
+}
+
+.footer nav ul {
+    display: flex;
+}
+
+.footer nav ul li {
+    margin: 0px 30px;
+}
+
+.footer nav ul li a {
+    color: #089DDD;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.footer nav ul li a:hover {
+    color: #A6A6A6;
+}
+
+.footer .social {
+    margin: 30px;
+}
+
+.footer .social a {
+    color: #089DDD;
+    font-size: 2rem;
+    margin: 0px 20px;
+    transition: 0.3s;
+}
+
+.footer .social a:hover {
+    color: #A6A6A6;
+}
+
+@media(max-width: 768px) {
+    .footer {
+        padding: 30px;
+    }
+}
+
+@media(max-width: 429px) {
+    .footer .social a {
+        margin: 0px 5px;
+    }
+}
+
+@media(max-width: 375px) {
+    .footer nav ul li {
+        margin: 0px 20px;
+    }
+}
