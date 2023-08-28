@@ -102,10 +102,12 @@ body h4{
     .header .header-container img {
         display: none;
     }
+}
 
     @media(max-width: 425px) {
         .header nav ul li a {
             font-size: 1.6rem;
+            font-weight: 700;
             margin: 10px;
         }
 
@@ -117,7 +119,12 @@ body h4{
             font-size: 1.2rem;
             letter-spacing: 0px;
         }
-    }
+}
+
+    @media(max-width: 320px) {
+        .header nav ul li a {
+            font-size: 1.5rem;
+        }
 
 }
 
@@ -372,11 +379,20 @@ body h4{
     .footer .social a {
         margin: 0px 5px;
     }
+
+    .footer nav ul li a{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 }
 
 @media(max-width: 375px) {
     .footer nav ul li {
         margin: 0px 20px;
+    }
+
+    .footer nav ul li a{
+        font-size: 1.5rem;
     }
 }
 
