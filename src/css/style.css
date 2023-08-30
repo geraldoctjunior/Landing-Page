@@ -135,7 +135,7 @@ body h4{
     display: grid;
     grid: 
     "picture tittle"
-    "picture text"        ;
+    "picture text";
     padding: 30px 40px 50px 40px;
     align-items: flex-start;
     justify-content: flex-start;
@@ -149,28 +149,59 @@ body h4{
 
 .about picture{
     grid-area: picture;
-    width: 250px;
+    width: 450px;
 }
 
 .about p{
-    padding: 30px;
+    font-size: 2rem;
+    padding: 25px;
     background-color: #3d3d3d;
     grid-area: text;
     color: #ffffff;
-    max-width: 450px;
+    max-width: 700px;
+    height: 390px;
 }
 
-@media(max-width: 780px){
-    .about{
-        padding: 20px;
+@media(min-width: 1024px){
+
+}
+
+@media(max-width: 1024px){
+    .about p{
+        font-size: 1.7rem;
+        height: 390px;
     }
+    .about picture{
+        width: 450px;
+    }
+}
+
+@media(max-width: 986px){
+    .about{
+        grid: 
+            "tittle tittle"
+            "picture text";
+        padding: 30px 20px 50px 20px;
+
+    }
+    .about p{
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .about picture{
+        width: 100%;
+    }
+
 }
 
 @media(max-width: 739px){
     .about{
         grid: "tittle" "picture" "text";
+        padding: 20px;
     }
     .about p{
+        font-size: 1.6rem;
         padding: 20px;
         max-width: 100%;
     }
