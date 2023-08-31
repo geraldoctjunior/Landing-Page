@@ -159,17 +159,17 @@ body h4{
     grid-area: text;
     color: #ffffff;
     max-width: 700px;
-    height: 390px;
 }
 
 @media(min-width: 1024px){
-
+    .about p{
+        height: 390px;
+    }
 }
 
 @media(max-width: 1024px){
     .about p{
         font-size: 1.7rem;
-        height: 390px;
     }
     .about picture{
         width: 450px;
